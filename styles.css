@@ -84,6 +84,37 @@ img.user-icon.small {
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 2fr 1fr;
 }
+
+.user.left {
+  display: grid;
+}
+
+.controls.left {
+  display: grid;
+  grid-template-columns: 100px 500px;
+  align-items: center;
+  gap: 10px;
+  padding-left: 60px;
+}
+
+.greeting > b {
+  font-size: x-large;
+  display: block;
+}
+
+.controls.right {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  padding-right: 60px;
+}
+
+.controls.right > button {
+  height: 50px;
+  border-radius: 30px;
+}
+
 .sidebar {
   background: rgb(123, 243, 123);
   grid-area: 1 / 1 / 3 / 2;
@@ -97,6 +128,7 @@ img.user-icon.small {
 .main-content {
   display: grid;
   grid-template-columns: 3fr 1fr;
+  padding-right: 40px;
 }
 
 .card {

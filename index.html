@@ -12,9 +12,11 @@
   <div class="container">
     <div class="header">
       <div class="user left">
-        <button>Search</button>
-        <label for="search">Search</label>
-        <input type="search" id="search" name="search" />
+        <form action="/submit-url" method="post">
+          <input type="image" src="" alt="Search" name="image" id="image">
+          <label for="search">Search</label>
+          <input type="search" id="search" name="search" />
+        </form>
       </div>
       <div class="user right">
         <button>Bell icon</button>
@@ -27,7 +29,7 @@
         <img class="user-icon big" src="public/images/rat3-icon.png" />
         <div class="greeting">
           Hi there,
-          <h1>Morgan Oakley (@morgan)</h1>
+          <b>Morgan Oakley (@morgan)</b>
         </div>
       </div>
       <div class="controls right">
