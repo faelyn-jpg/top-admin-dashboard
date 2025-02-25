@@ -11,15 +11,12 @@
 <body>
   <div class="container">
     <div class="header">
-      <div class="user left">
-        <form action="/submit-url" method="post">
-          <input type="image" src="" alt="Search" name="image" id="image">
-          <label for="search">Search</label>
-          <input type="search" id="search" name="search" />
-        </form>
-      </div>
+      <form action="/submit-url" method="post" class="user left">
+        <input type="image" name="submit" id="submit" src=" ./public/icons/magnify.svg" alt="search">
+        <input type="search" id="Search" name="Search" aria-label="Search" />
+      </form>
       <div class="user right">
-        <button>Bell icon</button>
+        <button class="notifications"><img src="./public/icons/bell-ring-outline.svg" /></button>
         <img class="user-icon small" src="public/images/rat3-icon.png" />
         <div>
           Morgan Oakley
@@ -42,7 +39,7 @@
     <div class="sidebar">
       <h1>Dashboard</h1>
       <ul>
-        <li>Home</li>
+        <li data-icon="">Home</li>
         <li>Profile</li>
         <li>Messages</li>
         <li>History</li>
