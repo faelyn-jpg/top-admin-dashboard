@@ -354,6 +354,27 @@ p {
   font-size: 1em;
 }
 
+.announcements > div > b::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.announcements > div > p {
+  transition: 0.2s ease-in-out;
+}
+
+.announcements > div:hover p {
+  color: var(--blue);
+}
+
 .announcements div:last-child {
   border: none;
   padding: 15px 0 0;
@@ -374,7 +395,6 @@ p {
   display: grid;
   grid-template-rows: repeat(4, 1fr);
   align-content: space-between;
-
   gap: 20px;
 }
 
@@ -383,6 +403,7 @@ p {
   grid-template-columns: 1fr 2.5fr;
   min-height: 60px;
   align-items: center;
+  cursor: pointer;
 }
 
 .contain {
@@ -452,7 +473,9 @@ ul.nav > li {
   margin-left: 20px;
 }
 
-.sidebar li > span {
+.sidebar li > span,
+.announcements > div > b,
+.announcements > div > p {
   position: relative;
   bottom: 2px;
   cursor: pointer;
@@ -461,6 +484,15 @@ ul.nav > li {
 .sidebar li::marker {
   font-size: 2em;
   line-height: 0.1;
+  cursor: pointer;
+}
+
+.sidebar li:hover span {
+  font-size: larger;
+}
+.sidebar li span {
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
 }
 
 .sidebar li > span::after {
@@ -476,7 +508,8 @@ ul.nav > li {
   transition: transform 0.25s ease-out;
 }
 
-.sidebar li > span:hover::after {
+.sidebar li:hover > span::after,
+.announcements > div:hover b::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
